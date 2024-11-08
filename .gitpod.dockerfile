@@ -41,6 +41,8 @@ ENV PATH=$PYTHONUSERBASE/bin:$PATH
 # Setup Heroku CLI
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
+RUN export DEBIAN_FRONTEND="noninteractive"
+
 # Setup MongoDB (6.0 from Jammy repos)
 RUN wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb && sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb && \
     sudo apt-get install gnupg && \
