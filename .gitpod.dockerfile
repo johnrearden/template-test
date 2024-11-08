@@ -41,6 +41,7 @@ ENV PATH=$PYTHONUSERBASE/bin:$PATH
 # Setup Heroku CLI
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
+# Added to fix broken gitpod build
 RUN export DEBIAN_FRONTEND="noninteractive"
 
 # Setup MongoDB (6.0 from Jammy repos)
